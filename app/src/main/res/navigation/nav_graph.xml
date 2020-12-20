@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.connect.welcome.WelcomeFragment"
+        android:label="CONNECT"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.connect.signIn.SignInFragment"
+        android:label="SIGN IN"
+        tools:layout="@layout/fragment_sign_in">
+        <action
+            android:id="@+id/action_signInFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popUpTo="@id/welcomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.connect.signUp.SignUpFragment"
+        android:label="SIGN UP"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signUpFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popUpTo="@id/welcomeFragment" />
+    </fragment>
+    <!--    //dashboard-->
+    <fragment
+        android:id="@+id/dashBoardFragment"
+        android:name="com.example.connect.dashBoard.DashBoardFragment"
+        android:label="DASHBOARD"
+        tools:layout="@layout/fragment_dash_board">
+        <argument
+            android:name="currentUser"
+            app:argType="com.example.connect.network.User" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+</navigation>

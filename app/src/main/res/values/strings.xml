@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Connect</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="connect">Connect</string>
+    <string name="sign_in_button">sign In</string>
+    <string name="sign_up_button">sign up</string>
+    <string name="name_hint">Enter Your Name</string>
+    <string name="logo_text">Connect</string>
+    <string name="email_hint">Enter Your Email</string>
+    <string name="signup_password">Password</string>
+    <string name="logo_image">logo_image</string>
+    <string name="todo">TODO</string>
+    <string name="name_error">Please Enter Your Name</string>
+    <string name="email_error_text">Enter A Valid Email Address</string>
+    <string name="email_error_empty_text">Enter Your Email Address</string>
+    <string name="dashboard_welcomeText">Welcome, %s</string>
+    <string name="preference_file_key">USER_SHARED_PREF</string>
+    <string name="user_name_key">username_key</string>
+    <string name="user_email_key">userEmailKey</string>
+    <string name="user_password_key">userPassword_key</string>
+    <string name="log_out">Log Out</string>
+</resources>
